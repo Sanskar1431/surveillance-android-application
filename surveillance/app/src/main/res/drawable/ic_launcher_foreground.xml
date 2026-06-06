@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#0B0F1A"
+        android:pathData="M12,12h84a12,12 0,0 1,12 12v84a12,12 0,0 1,-12 12h-84a12,12 0,0 1,-12 -12v-84a12,12 0,0 1,12 -12z"/>
+
+    <!-- Minimal Flow Stroke -->
+    <path
+        android:pathData="M30,70C30,50 40,40 54,36C68,32 80,36 84,44"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeColor="#7C9EFF"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- Secondary Subtle Curve -->
+    <path
+        android:pathData="M36,76C50,70 62,72 72,82"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeColor="#4ADE80"
+        android:fillColor="@android:color/transparent"/>
+
+</vector>

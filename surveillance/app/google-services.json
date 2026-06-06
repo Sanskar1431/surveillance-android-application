@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "737037185630",
+    "firebase_url": "https://pocketcamremote-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pocketcamremote",
+    "storage_bucket": "pocketcamremote.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737037185630:android:3852109873d8a15cb23acf",
+        "android_client_info": {
+          "package_name": "com.mycamera"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0uaMLGV6xv3Po2e4Z1It1sIg__IcXEvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

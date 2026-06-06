@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="status_connecting">CONNECTING&#8230;</string>
+    <string name="status_connection_error">CONNECTION ERROR</string>
+    <string name="status_room_not_found">ROOM NOT FOUND</string>
+    <string name="status_format">● STATUS: %1$s</string>
+    <string name="device_info_format">● %1$s (ID: %2$s)</string>
+</resources>

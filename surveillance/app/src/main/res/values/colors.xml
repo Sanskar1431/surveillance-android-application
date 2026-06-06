@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Girl Theme Palette -->
+    <color name="primary">#FF80AB</color> <!-- Pink Accent -->
+    <color name="primaryVariant">#F06292</color> <!-- Deeper Pink -->
+    <color name="secondary">#CE93D8</color> <!-- Soft Lavender -->
+    <color name="background">#FFF0F5</color> <!-- Lavender Blush (Soft background) -->
+    <color name="white">#FFFFFF</color>
+    <color name="textPrimary">#4A4A4A</color>
+    <color name="textSecondary">#888888</color>
+
+    <!-- Calculator Girl Theme -->
+    <color name="calc_bg">#FFF9FB</color>
+    <color name="calc_btn_num">#FFFFFF</color>
+    <color name="calc_btn_op">#FFD1DC</color> <!-- Pastel Pink -->
+    <color name="calc_btn_action">#E1BEE7</color> <!-- Pastel Purple -->
+    <color name="calc_btn_equal">#F48FB1</color>
+    <color name="calc_text">#000000</color>
+    <color name="black">#000000</color>
+</resources>

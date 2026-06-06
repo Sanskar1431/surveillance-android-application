@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <!-- Glowing Background Effect -->
+    <View
+        android:id="@+id/backgroundGlow"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:background="@drawable/timer_glow"
+        app:layout_constraintBottom_toBottomOf="@id/clockContainer"
+        app:layout_constraintEnd_toEndOf="@id/clockContainer"
+        app:layout_constraintStart_toStartOf="@id/clockContainer"
+        app:layout_constraintTop_toTopOf="@id/clockContainer" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="FOCUS MODE"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:letterSpacing="0.4"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Animated Clock Container -->
+    <FrameLayout
+        android:id="@+id/clockContainer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+        <ProgressBar
+            android:id="@+id/timerProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/timer_progress_bg"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/timer_progress_bg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mainTimerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="@color/black"
+                android:textSize="48sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tapToStartText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TAP TO START"
+                android:textColor="@color/textSecondary"
+                android:textSize="12sp"
+                android:letterSpacing="0.1" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Time Selection Buttons (Add) -->
+    <LinearLayout
+        android:id="@+id/timeOptionsAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/clockContainer">
+
+        <Button
+            android:id="@+id/btnAdd30"
+            style="@style/TimeButtonStyle"
+            android:text="+30m" />
+
+        <Button
+            android:id="@+id/btnAdd60"
+            style="@style/TimeButtonStyle"
+            android:text="+1h" />
+
+        <Button
+            android:id="@+id/btnAdd120"
+            style="@style/TimeButtonStyle"
+            android:text="+2h" />
+    </LinearLayout>
+
+    <!-- Time Selection Buttons (Reduce) -->
+    <LinearLayout
+        android:id="@+id/timeOptionsReduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/timeOptionsAdd">
+
+        <Button
+            android:id="@+id/btnSub30"
+            style="@style/TimeButtonStyle"
+            android:backgroundTint="#22FF0000"
+            android:text="-30m" />
+
+        <Button
+            android:id="@+id/btnSub60"
+            style="@style/TimeButtonStyle"
+            android:backgroundTint="#22FF0000"
+            android:text="-1h" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoToTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:text="TASK"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:letterSpacing="0.1"
+        app:layout_constraintBottom_toTopOf="@id/btnGoToCalculator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoToCalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@android:color/transparent"
+        android:text="CALCULATOR"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:letterSpacing="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageButton
+        android:id="@+id/btnHistory"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/calc_text" />
+
+    <LinearLayout
+        android:id="@+id/historyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/history_bg"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnHistory">
+
+        <TextView
+            android:id="@+id/tvHistoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent Calculations"
+            android:textColor="@color/calc_text"
+            android:alpha="0.7"
+            android:textSize="12sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvHistoryContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No history"
+            android:textColor="@color/calc_text"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingHorizontal="24dp"
+        android:text=""
+        android:textColor="@color/textSecondary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvDisplay" />
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom|end"
+        android:padding="24dp"
+        android:text="0"
+        android:textColor="@color/calc_text"
+        android:textSize="40sp"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeMaxTextSize="40sp"
+        app:autoSizeStepGranularity="2sp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintTop_toBottomOf="@id/btnHistory" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnGoToObserver"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplay">
+
+        <!-- Row 1 -->
+        <Button style="@style/CalcBtn.Action" android:text="C" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Action" android:text="+/-" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Action" android:text="%" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Operator" android:text="÷" android:layout_columnWeight="1"/>
+
+        <!-- Row 2 -->
+        <Button style="@style/CalcBtn.Number" android:text="7" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="8" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="9" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Operator" android:text="×" android:layout_columnWeight="1"/>
+
+        <!-- Row 3 -->
+        <Button style="@style/CalcBtn.Number" android:text="4" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="5" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="6" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Operator" android:text="-" android:layout_columnWeight="1"/>
+
+        <!-- Row 4 -->
+        <Button style="@style/CalcBtn.Number" android:text="1" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="2" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Number" android:text="3" android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Operator" android:text="+" android:layout_columnWeight="1"/>
+
+        <!-- Row 5 -->
+        <Button style="@style/CalcBtn.Number" android:layout_columnSpan="2" android:layout_width="0dp" android:text="0" android:layout_columnWeight="2" android:layout_gravity="fill_horizontal"/>
+        <Button style="@style/CalcBtn.Number" android:text="." android:layout_columnWeight="1"/>
+        <Button style="@style/CalcBtn.Equal" android:text="=" android:layout_columnWeight="1"/>
+
+    </GridLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGoToObserver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:text="JOIN AS OBSERVER"
+        android:textColor="#33000000"
+        android:textSize="12sp"
+        android:letterSpacing="0.1"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
